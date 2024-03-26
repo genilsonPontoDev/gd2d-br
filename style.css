@@ -74,7 +74,13 @@ body>div>div {
 
 .header img {
     max-height: 40px;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15))
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
+    transition: 0.1s;
+}
+
+.header img:hover {    
+    filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
+    max-height: 39px;
 }
 
 .banner>div>div {
@@ -135,13 +141,20 @@ h1 {
 }
 
 .bio strong {
-    color: #FFF;
-    text-decoration: ;
+    color: #FFF;    
 }
 
 .cta-large img {
+    height: 70px;
     margin: 24px 0 48px 0;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15))
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
+    transition: 0.1s;
+}
+
+.cta-large img:hover {  
+    height: 68px;
+    margin: 24px 0 50px 0;
+    filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
 }
 
 .portfolio>div {
