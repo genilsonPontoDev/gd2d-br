@@ -17,7 +17,7 @@ body {
 
 .bg {
     background: rgb(2, 31, 7);
-    background: linear-gradient(180deg, rgba(2, 31, 7, 0) 18%, rgba(2, 31, 7, 1) 10%, rgba(9, 133, 30, 1) 30%,rgba(2, 31, 7, 1) 50%);
+    background: linear-gradient(180deg, rgba(2, 31, 7, 0) 18%, rgba(2, 31, 7, 1) 10%, rgba(9, 133, 30, 1) 30%, rgba(2, 31, 7, 1) 50%);
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
     width: 100%;
 }
@@ -77,7 +77,17 @@ body>div>div {
     transition: 0.1s;
 }
 
-.header img:hover {    
+.header-m {
+    padding: 24px 12px 0;
+}
+
+.header-m img {
+    max-height: 40px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
+    transition: 0.1s;
+}
+
+.header img:hover {
     filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
     max-height: 39px;
 }
@@ -88,9 +98,49 @@ body>div>div {
     background-size: 82%, 26%;
     background-repeat: no-repeat;
     background-color: #054B11;
-    width: 800px;
-    height: 140px;    
+    width: var(--bannerWidth, 800px);
+    height: 140px;
 }
+
+
+/**************  TEST ANIMAÇÃO ******************/
+
+
+/* .banner>div>div:hover {
+    --bannerWidth: 850px;
+} */
+
+.banner>div>div {
+    /* animation: scaleContent 1s; */
+    animation: moveContent 1s;
+}
+
+@keyframes scaleContent {
+    from {
+        width: 800px;
+    }
+
+    to {
+        width: 850px;
+    }
+}
+
+@keyframes moveContent {
+    from {
+        opacity: 0.5;
+        translate: -3vw 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+
+/**************  TEST ANIMAÇÃO ******************/
+
 
 .banner {
     color: #FFF;
@@ -141,8 +191,8 @@ h1 {
 }
 
 .bio strong {
-    color: #FFF;    
-    font-size: 12px;   
+    color: #FFF;
+    font-size: 12px;
 }
 
 .cta-large img {
@@ -152,7 +202,7 @@ h1 {
     transition: 0.1s;
 }
 
-.cta-large img:hover {  
+.cta-large img:hover {
     height: 48px;
     margin: 18px 0 50px 0;
     filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
@@ -163,7 +213,7 @@ h1 {
 }
 
 .portfolio>div>div {
-    background-color: #032208;    
+    background-color: #032208;
     width: 260px;
     /* height: 300px; */
     box-shadow: 4px 5px 3px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -188,7 +238,7 @@ h1 {
         height: 120vh;
     }
 
-    .bg {        
+    .bg {
         max-width: 1024px;
     }
 
@@ -206,10 +256,14 @@ h1 {
         display: block;
     }
 
+    .mobile_content {
+        display: none;
+    }
+
     .bio img {
         width: 400px;
     }
-    
+
     .bio>div>div {
         background-color: #00826A;
         width: 400px;
@@ -226,9 +280,9 @@ h1 {
         line-height: 2em;
         padding: 50px 10px 0 70px;
     }
-    
+
     .bio strong {
-        color: #FFF;    
+        color: #FFF;
     }
 
     .cta-large img {
@@ -237,11 +291,10 @@ h1 {
         filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
         transition: 0.1s;
     }
-    
-    .cta-large img:hover {  
+
+    .cta-large img:hover {
         height: 68px;
         margin: 24px 0 50px 0;
         filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
     }
 }
-    
