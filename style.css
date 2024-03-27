@@ -18,6 +18,7 @@ body {
 .bg {
     background: rgb(2, 31, 7);
     background: linear-gradient(180deg, rgba(2, 31, 7, 0) 25%, rgba(2, 31, 7, 1) 10%, rgba(9, 133, 30, 1) 70%,rgba(2, 31, 7, 1) 70%);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
     /* width: 100%; */
 }
 
@@ -31,9 +32,7 @@ body {
 
 body>div>div {
     /* background-color: purple; */
-    min-width: 1024px;
-    max-width: 1900px;
-    height: 200vh;
+    height: 220vh;
 }
 
 .right {
@@ -56,7 +55,7 @@ body>div>div {
 
 .cols-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .cols-3 {
@@ -69,7 +68,7 @@ body>div>div {
 }
 
 .header {
-    padding: 24px 0;
+    padding: 24px 12px;
 }
 
 .header img {
@@ -114,13 +113,13 @@ h1 {
 }
 
 .bio img {
-    width: 400px;
+    width: 330px;
 }
 
 .bio>div>div {
     background-color: #00826A;
-    width: 400px;
-    height: 400px;
+    width: 330px;
+    height: 330px;
 }
 
 .bio>div>div:first-child {
@@ -130,30 +129,32 @@ h1 {
 .bio>div>div:last-child {
     background-image: url(assets/images/bg-bio.svg);
     background-position: bottom;
-    background-size: 400px;
+    background-size: 330px;
 }
 
 .bio p {
     color: #FFF;
+    font-size: 16px;
     font-weight: Light;
-    line-height: 2em;
-    padding: 50px 10px 0 70px;
+    line-height: 1.3em;
+    padding: 40px 10px 10px 70px;
 }
 
 .bio strong {
     color: #FFF;    
+    font-size: 12px;   
 }
 
 .cta-large img {
-    height: 70px;
-    margin: 24px 0 48px 0;
+    height: 50px;
+    margin: 18px 0 48px 0;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
     transition: 0.1s;
 }
 
 .cta-large img:hover {  
-    height: 68px;
-    margin: 24px 0 50px 0;
+    height: 48px;
+    margin: 18px 0 50px 0;
     filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
 }
 
@@ -173,3 +174,65 @@ h1 {
     overflow-y: hidden;
     margin: 10px;
 }
+
+.desk_content {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    body>div>div {
+        /* background-color: purple; */
+        min-width: 1024px;
+        max-width: 1900px;
+        height: 200vh;
+    }
+
+    .cols-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .desk_content {
+        display: block;
+    }
+
+    .bio img {
+        width: 400px;
+    }
+    
+    .bio>div>div {
+        background-color: #00826A;
+        width: 400px;
+        height: 400px;
+    }
+
+    .bio>div>div:last-child {
+        background-size: 400px;
+    }
+
+    .bio p {
+        color: #FFF;
+        font-weight: Light;
+        line-height: 2em;
+        padding: 50px 10px 0 70px;
+    }
+    
+    .bio strong {
+        color: #FFF;    
+    }
+
+    .cta-large img {
+        height: 70px;
+        margin: 24px 0 48px 0;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
+        transition: 0.1s;
+    }
+    
+    .cta-large img:hover {  
+        height: 68px;
+        margin: 24px 0 50px 0;
+        filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15));
+    }
+}
+    
