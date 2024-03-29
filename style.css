@@ -73,8 +73,9 @@ body>div {
     padding: 8px;
 }
 
-.topo img {
+.topo img {    
     max-height: 48px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
 }
 
 .banner>div>div {
@@ -82,6 +83,7 @@ body>div {
     background: linear-gradient(45deg, rgb(29, 29, 29) 0%, rgb(66, 51, 51) 70%, rgb(77, 57, 44) 100%);
     border-radius: 12px;
     margin: 24px 0 48px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
 }
 
 .banner>div>div h1 {
@@ -105,6 +107,7 @@ body>div {
     border-radius: 100%;
     max-width: fit-content;
     background-color: #000;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
 }
 
 .foto img {
@@ -118,6 +121,8 @@ body>div {
 
 .bio p {
     margin: 8px;
+    font-size: 18px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
 }
 
 .bio strong {
@@ -139,6 +144,7 @@ body>div {
     width: 90%;
     margin: 12px 0;
     color: var(--textLight, #FFF);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
     /* transition: 0.1s; */
 }
 
@@ -156,6 +162,7 @@ body>div {
 
 .cta img {
     width: 90%;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
 }
 
 .itens_portfolio>div {
@@ -182,20 +189,151 @@ h2 {
     font-family: 'Junge';
     margin: 24px 0 0 0;
     font-size: 40px;
-    background: -webkit-linear-gradient(45deg, #1f0101, #382304);
+    background: -webkit-linear-gradient(45deg, rgb(56, 6, 2) 30%, rgb(90, 36, 0) 50%, rgb(114, 46, 0) 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+footer {
+    background-color: #000;
+    padding: 8px;
+    margin: 24px 0 0 0;
 }
 
 footer a {
     text-decoration: none;
     font-weight: bolder;
-    color: #222;
+    color: #f2f2f2;
+}
+
+/************* MOBILE ANIMATIONS ************/
+
+@media (max-width: 768px) {
+
+    body>div {
+        padding: 8px 0 0 0;
+    }
+
+    .topo img {        
+        opacity: 0;
+        max-height: 24px;
+        animation: logoAnimation 400ms forwards;
+        animation-delay: 100ms;
+    }
+
+    @keyframes logoAnimation {
+        from {
+            opacity: 0;
+            max-height: 24px;
+        }
+
+        to {
+            opacity: 1;
+            max-height: 48px;
+        }
+    }
+
+    .foto {
+        opacity: 0;
+        width: 100px;
+        animation: fotoAnimation 400ms forwards;
+        animation-delay: 500ms;
+    }
+
+    @keyframes fotoAnimation {
+        from {
+            opacity: 1;
+            width: 100px;
+        }
+
+        to {
+            opacity: 1;
+            width: 260px;
+        }
+    }
+
+    .bio>div>div>div:last-child {
+        opacity: 0;
+        translate: -100vw;
+        animation: nameAnimation 400ms forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes nameAnimation {
+        from {
+            opacity: 0;
+            translate: -100vw;
+        }
+
+        to {
+            opacity: 1;
+            translate: 0;
+        }
+    }
+
+    .biografia {
+        opacity: 0;
+        translate: 100vw;
+        animation: biografiaAnimation 400ms forwards;
+        animation-delay: 1.5s;
+    }
+
+    @keyframes biografiaAnimation {
+        from {
+            opacity: 0;
+            translate: 100vw;
+        }
+
+        to {
+            opacity: 1;
+            translate: 0;
+        }
+    }
+
+    .cta img {
+        opacity: 0;
+        width: 120%;
+        animation: ctaAnimation 600ms forwards;
+        animation-delay: 1.9s;
+    }
+
+    @keyframes ctaAnimation {
+        from {
+            opacity: 0;
+            width: 120%;
+        }
+
+        to {
+            opacity: 1;
+            width: 90%;
+        }
+    }
+
+    .portfolio, footer {
+        opacity: 0;
+        animation: remainderAnimation 900ms forwards;
+        animation-delay: 2.5s;
+    }
+
+    @keyframes remainderAnimation {
+        from {
+            opacity: 0;            
+        }
+
+        to {
+            opacity: 1;            
+        }
+    }
+
 }
 
 /************* TELA GRANDE ************/
 
 @media (min-width: 768px) {
+
+    body>div {
+        padding: 8px 0 0 0;
+    }
 
     section>div {
         max-width: 1024px;
@@ -203,7 +341,7 @@ footer a {
     }
 
     .topo {
-        padding: 12px;
+        padding: 12px 24px;
     }
 
     .ignore_size {
