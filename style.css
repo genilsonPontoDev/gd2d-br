@@ -61,6 +61,12 @@ img {
     justify-content: center;
 }
 
+.cols_2_flex {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;    
+}
+
 .cols_3 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -162,7 +168,8 @@ body>div {
 
 .cta img {
     width: 90%;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15));
+    /* filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.15)); */
+    filter: drop-shadow(0px 0px 10px rgba(205, 219, 10, 0.9));
 }
 
 .itens_portfolio>div {
@@ -325,6 +332,11 @@ footer a {
         }
     }
 
+    /* 3.4s */
+
+    /************* MOBILE SCROLL ANIMATIONS ************/
+
+    
 }
 
 /************* TELA GRANDE ************/
